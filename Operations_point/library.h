@@ -1,0 +1,6 @@
+#ifndef OPERATIONS_POINT_LIBRARY_H
+#define OPERATIONS_POINT_LIBRARY_H
+#include <stdio.h>
+
+
+#endif //OPERATIONS_POINT_LIBRARY_H
