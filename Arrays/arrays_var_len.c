@@ -23,19 +23,21 @@ int main(void)
     printf("Трацидиционный массив 3х5\n");
     printf("Сумма всех элементов = %d\n",
            sum2d(ROWS, COLS, junk));
-    printf("Традиционный массив 2х6\n",
+    printf("Традиционный массив 2х6\n");
+    printf("Сумма всех элементов = %d\n",
            sum2d(ROWS-1, COLS+2, morejunk));
-    printf("Массив переменной длины 3х10\n",
-           sum2d(rs, cs, varr));
+    printf("Массив переменной длины 3х10\n");
     printf("Сумма всех элементов = %d\n",
            sum2d(rs, cs, varr));
     return 0;
 }
+
 // функция с параметром типа массива переменной длины
 int sum2d(int rows, int cols, int ar[rows][cols]) {
     int r, c;
     int tot = 0;
-    for (r = 0; r < cols; c++)
-        tot +=ar[r][c];
+    for (r = 0; r < rows; r++)
+        for (c = 0; c < cols; c++)
+            tot +=ar[r][c];
     return tot;
 }
